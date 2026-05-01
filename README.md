@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-# Wompus
-# Wompus
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wumpus World Agent - README</title>
+  <title>Wumpus World Agen</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -170,4 +168,4 @@ It uses percepts like breeze and stench to infer safe paths and avoid danger.
 <p>
 Author: Muhammad Faizan (BS Computer Science)
 </p>
->>>>>>> 56b8ebb (Final ReadMe)
+
