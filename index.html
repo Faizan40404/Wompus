@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wumpus World Agent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Wumpus World — KB Agent</h1>
+
+  <div class="controls">
+    <label>Rows: <input type="number" id="rows" value="4" min="3" max="8"></label>
+    <label>Cols: <input type="number" id="cols" value="4" min="3" max="8"></label>
+    <button onclick="initGame()">New Game</button>
+    <button id="stepBtn" onclick="step()" disabled>Step</button>
+    <button id="autoBtn" onclick="toggleAuto()" disabled>Auto</button>
+  </div>
+
+  <div class="main">
+    <div id="grid-container">
+      <div id="grid"></div>
+    </div>
+
+    <div class="sidebar">
+      <div class="panel">
+        <h3>Metrics</h3>
+        <div class="metric"><span>Inference Steps</span><span id="infer-count">0</span></div>
+        <div class="metric"><span>Cells Visited</span><span id="visit-count">0</span></div>
+        <div class="metric"><span>Status</span><span id="status">—</span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Current Percepts</h3>
+        <div id="percept-list">None</div>
+      </div>
+
+      <div class="panel">
+        <h3>Log</h3>
+        <div id="log"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Legend</h3>
+        <div class="legend">
+          <div class="legend-item"><div class="legend-box safe-box"></div> Safe (Green)</div>
+          <div class="legend-item"><div class="legend-box unknown-box"></div> Unknown (Gray)</div>
+          <div class="legend-item"><div class="legend-box danger-box"></div> Danger (Red)</div>
+          <div class="legend-item"><div class="legend-box agent-box"></div> Agent (Gold border)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
